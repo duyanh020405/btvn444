@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chuỗi Con</title>
+<script>
+    function chuoiCon(chuoi) {
+        var result = [];
+        for (var i = 0; i < chuoi.length; i++) {
+            for (var j = i + 1; j <= chuoi.length; j++) {
+                result.push(chuoi.substring(i, j));
+            }
+        }
+        return result;
+    }
+
+    function hienThiChuoiCon() {
+        var chuoiNhap = document.getElementById("chuoiNhap").value;
+        var ketQua = chuoiCon(chuoiNhap);
+        document.getElementById("ketQua").innerHTML = "Các chuỗi con của chuỗi đã nhập là: " + JSON.stringify(ketQua);
+    }
+</script>
+</head>
+<body>
+
+<h2>Nhập một chuỗi và hiển thị các chuỗi con</h2>
+
+<div>
+    <label for="chuoiNhap">Nhập chuỗi:</label>
+    <input type="text" id="chuoiNhap">
+    <button onclick="hienThiChuoiCon()">Hiển thị chuỗi con</button>
+</div>
+
+<div id="ketQua"></div>
+
+</bo

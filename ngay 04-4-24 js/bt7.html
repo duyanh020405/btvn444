@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Find Subarray</title>
+  </head>
+  <body>
+    <p>Nhập số để tìm mảng con:</p>
+    <input type="number" id="numberInput" />
+    <button onclick="tim()">Tìm</button>
+    <script>
+      function tim() {
+        var targetSum = parseInt(document.getElementById("numberInput").value);
+        var a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+
+        for (let i = 0; i < a.length; i++) {
+          for (let j = i; j < a.length; j++) {
+            var sum = 0;
+            var con = [];
+            con.length = 3;
+            for (let k = i; k <= j; k++) {
+              sum += a[k];
+              con.push(a[k]);
+            }
+            if (sum === targetSum) {
+              console.log(con);
+              return;
+            }
+          }
+        }
+        console.log("Không có mảng con thỏa mãn");
+      }
+    </script>
+  </body>
+</html>

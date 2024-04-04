@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    a :
+    <input type="number" id="a" />
+    b :
+    <input type="number" id="b" />
+    <button onclick="i()">tinh</button>
+    <script>
+      function i() {
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        if (a > b) {
+          for (let i = b; i < a; i++) {
+            console.log(i);
+          }
+        }
+        if (b > a) {
+          for (let i = a; i < b; i++) {
+            console.log(i);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

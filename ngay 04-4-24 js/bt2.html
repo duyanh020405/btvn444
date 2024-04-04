@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    nhap vao day
+    <input type="text" id="hi" />
+    <button onclick="find()">Tim</button>
+    <script>
+      function find() {
+        var count = 0;
+        var a = document.getElementById("hi").value;
+        var arr = ["a", "s", "d", "f", "g", "h", "l"];
+        for (let i = 0; i < arr.length; i++) {
+          if (a == arr[i]) {
+            count++;
+          }
+        }
+        if (count != 0) {
+          console.log("co");
+        } else {
+          console.log("khong");
+        }
+      }
+    </script>
+  </body>
+</html>

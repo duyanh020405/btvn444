@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      arr1 = [1, 2, 5, 7];
+      arr2 = [10, 5, 7];
+      arr1.sort((a, b) => a - b);
+      arr2.sort((a, b) => a - b);
+      let small = 1
+      let small2 = 1;
+      for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] === small) {
+          small++;
+        } else {
+          break;
+        }
+      }
+
+      for (let i = 0; i < arr1.length; i++) {
+        if (arr2[i] === small2) {
+          small++;
+        } else {
+          break;
+        }
+      }
+
+      console.log(small);
+      console.log(small2);
+    </script>
+  </body>
+</html>

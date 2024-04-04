@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    nhap so nguyen
+    <input type="text" id="a" />
+    <button onclick="check()">check</button>
+    <script>
+      function check() {
+        var arr1 = ["a", "c", "d", "f", "g", "h", "j", "r", "r", "h", "h", "h"];
+        var a = document.getElementById("a").value;
+        var count = 0;
+        for (let i = 0; i < arr1.length; i++) {
+          if (a == arr1[i]) {
+            count++;
+          }
+        }
+        console.log(a, "xuat hien", count);
+      }
+    </script>
+  </body>
+</html>

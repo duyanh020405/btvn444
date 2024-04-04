@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="a" />
+    <button onclick="check()">check</button>
+    <script>
+        function check() {
+            var a = document.getElementById("a").value;
+            var arr = a.split("");
+            var count = {};
+            for (let i = 0; i < arr.length; i++) {
+                if (count[arr[i]] === undefined) {
+                    count[arr[i]] = 1;
+                } else { 
+                    count[arr[i]]++;
+                }
+            }
+    
+            for (var key in count) {
+                if (count.hasOwnProperty(key) && count[key] >= 2) {
+                    console.log(key);
+                }
+            }
+        }
+    </script>
+    
+  </body>
+</html>
